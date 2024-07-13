@@ -1,0 +1,127 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.letters {
+  max-width: 500px;
+}
+
+.letterDisplay {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+div.letter {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  background-color: dimgrey;
+  font-size: 2em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+div.letter:nth-child(4),
+div.letter:nth-child(6) {
+  margin-left: 10px;
+}
+
+button.letter {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  width: 96px;
+  font-size: 2em;
+}
+
+button.action {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  margin-left: 10px;
+  font-size: 2em;
+}
+
+.buttons {
+  margin-top: 20px;
+  button {
+    font-size: 2em;
+  }
+}
+
+.wordDisplay {
+  font-size: 2em;
+  height: 2em;
+}
+
+.wordScores {
+  margin-top: 20px;
+  max-width: 500px;
+}
+
+.wordScore {
+  display: flex;
+}
+
+.wordScore .word,
+.wordScore .score {
+  font-size: 2em;
+  background-color: #333333;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.wordScore .word {
+  flex: 0 1 auto;
+  width: 100%;
+  overflow: auto;
+}
+.wordScore .score {
+  width: 50px;
+  flex: 0 0 auto;
+}
