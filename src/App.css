@@ -61,6 +61,11 @@ div.letter {
   justify-content: center;
   align-items: center;
   margin: 2px;
+  border: 1px solid dimgrey;
+}
+
+div.letter.error {
+  border: 1px solid red;
 }
 
 div.letter:nth-child(4),

@@ -7,13 +7,18 @@ const alphabet = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 function CodeEntry(props) {
 	const [letters, setLetters] = useState([]);
 	const [searchParams, setSearchParams] = useSearchParams();
+	const [submitError, setSubmitError] = useState(false);
 	//searchParams.get("__firebase_request_key")
 
 	let letterBoxes = letters.map((letter, index) => (<div className="letter" key={index}>{letter}</div> ));
 	if(letterBoxes.length < 6) {
 		// Fill in blank boxes up to 6
 		for(let index = letterBoxes.length; index < 6; index++) {
-			letterBoxes.push(<div className="letter" key={index}> </div>);
+			let classNames = ['letter'];
+			if(submitError) {
+				classNames.push('error');
+			}
+			letterBoxes.push(<div className={classNames.join(' ')} key={index}> </div>);
 		}
 	}
 
@@ -29,6 +34,7 @@ function CodeEntry(props) {
 							key={index}
 							className="letter"
 							onClick={() => {
+								setSubmitError(false);
 								if(letters.indexOf(letter) === -1) {
 									if (letters.length < 6) {
 										setLetters([...letters, letter]);
@@ -47,8 +53,12 @@ function CodeEntry(props) {
 				<div className="buttons">
 					<button
 						onClick={() => {
-							let encoded = Encoder.encode(letters);
-							setSearchParams({code: encoded});
+							if(letters.length == 6) {
+								let encoded = Encoder.encode(letters);
+								setSearchParams({ code: encoded });
+							} else {
+								setSubmitError(true);
+							}
 						}}
 					>Encode</button>
 				</div>
