@@ -1,8 +1,5 @@
-# React + Vite
+## Star Message Scorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Scores words for Message From The Stars.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Enter your 6 letters in order, then submit to get a shareable URL that won't reveal the letters.  Anyone can then use that page to score words without revealing the letters.s
