@@ -17,7 +17,9 @@ export default class Scorer {
 		let score = 0;
 		score += counts[letters[0]] + counts[letters[1]] + counts[letters[2]];
 		score *= Math.pow(2, (counts[letters[3]] + counts[letters[4]]));
-		score *= Math.pow(-1, counts[letters[5]]);
+		if(counts[letters[5]]) {
+			score *= -1;
+		}
 
 		return score;
 	}
