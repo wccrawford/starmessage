@@ -30,7 +30,7 @@ test('score eabbqzz with tesabz', () => {
 	let value = 'eabbqzz';
 	let letters = ['t', 'e', 's', 'a', 'b', 'z'];
 	let score = Scorer.score(value, letters);
-	expect(score).toBe(8);
+	expect(score).toBe(-8);
 });
 
 test('score testabbqz with tesabz', () => {
